@@ -1,0 +1,110 @@
+  LINUX BASIC COMMANDS
+1. pwd 				: Displays the present working directory
+2. clear 			: Used to clear the terminal
+3. cd <path> 			: Used to change the current working directory
+4. cd 				: Changes the directory to the home directory
+5. cd ~ 			: Changes the directory to the home directory
+6. cd / 			: Changes the directory to the root directory
+7. cd .. 			: Changes the directory to it’s parent directory
+8. cd ‘folder name’ 		: Used to change the directory when there is a space in the directory name
+9. ls 				: Lists all the contents in the current working directory
+10. ls <path> 			: By specifying the path after ls, the content in that path will be displayed
+11. ls -l 			: lists all the contents along with it’s owner, permissions , size and time Stamp(long format)
+12. ls -a 			: Lists all the hidden contents in the specified directory
+13. ls -author 			: Lists the contents in the specified directory along with it’s owner
+14. ls /home/ 			: Lists all the contents in the specified directory by size
+15. ls *.<format> 		: Lists only the contents in the directory of a particular format
+16. ls -lS > file 		: Copies the result of ls command into a text file
+17. cat <file> 			: Used to display the content of the file on terminal
+18. cat -b <file> 		: Used to add line numbers to non-blank lines
+19. cat -n <file> 		: Used to add line numbers to all lines
+20. cat -s <file> 		: Used to squeeze blank lines into one line
+21. cat -E <file> 		: Show $ at the end of each line
+22. cat > file 			: Used to create a new file and enter text contents from the terminal
+23. cat >> file 		: Used to append text contents to an existing file from the terminal
+24. grep <string> file 		: Returns results for matching string
+25. grep -i <string> file 	: Returns results for case insensitive string
+26. grep -n <string> file 	: Returns the matching string along with their line number
+27. grep -v <string> file 	: Returns the result of lines not matching the string
+28. grep -c <string> file 	: Returns the number of lines which matches the string
+29. sort <file> 		: sorts the contents of file and returns them in alphabetical order
+30. sort –r <file> 		: Returns the results in reverse order(descending order)
+31. sort –f <file> 		: It will do the case insensitive sorting
+32. sort –n <file> 		: Returns the results as per numerical order
+33. grep <string> <file> | sort : Searches for string and sorts the results
+34. grep <string> <file> | sort –r : Sorts the results in reversing order
+35. cp <file1> <file2> 		: Used to copy files
+36. cp -i <file1> <file2> 	: Enters interactive mode; CLI asks before overwriting files
+37. cp -n <file1> <file2> 	: Does not overwrite the file
+38. cp -u <file1> <file2> 	: Updates the destination file only when source file is different from destination file
+39. cp –R <dir1> <dir2>        	: Used to copy directories
+40. cp –v <file1> <file2> 	: verbose; prints informative messages
+41. mv <file1> <file2> 		: Used to move and rename files
+42. mv -i <file1> <file2> 	: Interactive mode; CLI asks before overwriting files
+43. mv –u <file1> <file2> 	: updates the destination file only only when source file is different from destination file
+44. mv -v <file1> <file2> 	: Verbose; prints source and destination files
+45. mkdir <directory> 		: Used to create a directory
+46. mkdir -p file1/file2/file3 	: Creates both a new parent directory and subdirectory
+47. mkdir –p file1/{f2,f3,f4} 	: Used to create multiple subdirectories inside the new parent directory
+48. rmdir <dir> 		: Used to remove the directory(empty)
+49. rmdir –p f1/f2/f3 		: Used to remove both the parent and child directory(empty)
+50. rmdir –pv f1/f2/f3 		: Used to remove all the parent and subdirectories along with the verbose
+51. rm –r <dir> 		: Used to remove even non empty directories 
+52. rm –rp f1/f2/f3 		: Removes non empty directories including parent and Subdirectories
+53. ls -R <path> 		: lists all the contents in specified folder in tree format
+54. less <file> 		: Used to view the file on terminal (especially for big files)
+                                  ( up/down arrow is used to go through the file line by line & tab is used to view The file page by page &
+                                  “g” is used to go to the beginning of the file & “G” is Used to go to the end of the file & /<string> is
+                                  used to search for the string in File from top to bottom & ?<string> is used to search from down to top)
+55. touch <file> 		: Used to create an empty file
+56. nano <file> 		: Used to create a new file and it will take you to the text editor
+                                  ( “ctrl + o“ to save the file ,”ctrl+k” to cut ,”ctrl+u” to uncut ,”ctrl+x” to exit)
+57. sudo 			: Executes only that command with root/super user privileges
+58. su <username> 		: Used to switch to a different user
+59. su/sudo -s 			: Used to switch to root user
+60. echo “string” 		: used to display the string
+61. echo $<variable name> 	: Used to display the value assigned to variable
+62. top 			: Used to display all the processes running in your system
+    				  (“s” flag is used to change the refreshing time & “i” is used to display only the Running processes & “k”
+                                  is used to kill the processes(by pid))
+63. pidof <process name> 	: Used to know the pid of a certain process
+64. kill <pid>/kill –KILL <pid>/kill -9 <pid> : Used to kill the process
+65. ps -ux 			: Used to display the longlist of all the running processes
+66. ps -aux 			: Used to display all the processes which run by all the users
+67. ps -U <username> 		: Used to display the processes run by certain user
+68. which <command> 		: Used to identify the location of executables
+69. whatis <command> 		: Provides very brief description of command
+70. sudo useradd <username> -m 	: Used to add a new user along with new home directory(-m)
+71. sudo passwd <username> 	: Used to set a password for the user
+72. sudo userdel <username> 	: Used to delete the user
+73. sudo userdel -r <username> 	: Used to delete the user and user home directory
+74. sudo rm –r /home/<usrname>/	: Used to delete the home directory of the user
+75. groups 			: Used to show the groups in which the current user is connected to
+76. cat /etc/group/ 		: Used to show all the groups in the system
+77. sudo groupadd <groupname> 	: Used to add a group
+78. sudo groupdel <groupname> 	: Used to delete a group
+79. sudo gpasswd -a <username> <groupname> : Used to add the user to a particular group
+80. sudo gpasswd -d <username> <groupname> : Used to remove the user from a particular group
+81. df 				: Used to get the full summary of available and used disk space usage of the file system on linux system
+82. df -h 			: same as df ;but displays in human readable way
+83. du 				: Used to display the amount of space used by certain folder/directory
+84. du -h 			: Same as du;but in human readable format
+85. du -sh 			: Same as du ; but in a simple format as a summary
+86. free -h 			: Gives information about total used and available space of physical memory and swap memory with buffers
+                                  used by kernel
+                                  (‘-k’ flag for kilobytes, ‘- m’ flag for megabytes, ‘-g’ flag for gigabytes)
+87. watch <command> 		: Used to run the command repeatedly at regular intervals
+88. watch -n <time(s)> <command> : Same as watch and to set the time interval
+89. head <document> 		: Used to display the first 10 lines of the document
+90. head -5 <document> 		: Used to display first 5 lines of the document(can change the value of 5 to any)
+91. tail <document> 		: Used to display the last 10 lines of the document
+92. tail -5 <document> 		: Used to display last 5 lines of the document(can change the value of 5 to any)
+                                  ( can apply these head and tail commands to any number of files )
+93. find <path> -name <file> 	: Used to find the location of the file in a particular path
+94. wc <file> 			: Used to display the number of lines, words and characters the file has
+95. wc -l <file> 		: Used to display the number of lines only(‘-w’ flag for no.of words and ‘-c’ flag for no.of characters)
+96. cal 			: Used to display the current month
+97. cal <year> 			: Used to display the calendar of a particular year
+98. cal <month> <year> 		: Used to display the calendar of a particular month
+99. date 			: Used to display the date
+100. sudo date -s “01 jan 2050 12:00:00” : Used to set the date and time in system
