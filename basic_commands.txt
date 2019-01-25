@@ -12,7 +12,7 @@
 11. ls -l 			: lists all the contents along with it’s owner, permissions , size and time Stamp(long format)
 12. ls -a 			: Lists all the hidden contents in the specified directory
 13. ls -author 			: Lists the contents in the specified directory along with it’s owner
-14. ls /home/ 			: Lists all the contents in the specified directory by size
+14. ls -lS /path/to/folder/ 	: Lists all the contents in the specified directory by size
 15. ls *.<format> 		: Lists only the contents in the directory of a particular format
 16. ls -lS > file 		: Copies the result of ls command into a text file
 17. cat <file> 			: Used to display the content of the file on terminal
